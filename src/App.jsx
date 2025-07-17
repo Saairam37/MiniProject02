@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import RecipeDetails from './RecipeDetails';
 import Home from './Home';
-import ingLoaders from './loaders/units/IngLoaders';
+import ingLoaders from './loaders/units/ingLoaders';
 
 const routes = [
   {
