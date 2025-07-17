@@ -9,6 +9,9 @@ const RecipeList = () => {
 
     useEffect(()=>{
         
+        if(urls === null){
+            setTodos([])
+        }else{
         if(matchList.length == 0){
         if(cat.length == 0){
             const newTodo = urls;
@@ -26,7 +29,7 @@ const RecipeList = () => {
             const newTodo = urls.filter(list => list.strCategory === cat);
             setTodos(newTodo.filter(obj =>matchList.every(kw =>Object.values(obj).some(val => typeof val === 'string' && val.toLowerCase().includes(kw.toLowerCase())))));
         }
-    }
+    }}
     },[urls, matchList])
 
   return (
